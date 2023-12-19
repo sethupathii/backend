@@ -11,6 +11,10 @@ const Port = process.env.PORT;
 app.use(express.json());
 app.use('/', routes);
 
+app.get('/',(req,res)=>{
+    res.send("hello render")
+})
+
 app.listen(Port, (req, res) => {
     console.log("THe port is running at the port of 6500");
 })
